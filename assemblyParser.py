@@ -26,10 +26,11 @@ def examine(filename):
                 continue
             if(bool):
                 dict[function]['code'].append(line)
-            if(line[0:4]=='call'):
-                dict[function]['fCalled'].append(line)
-            if(line[0]!='.' and line[len(line)-1]==':'):
-                break
+                if(line[0:4]=='call'):
+                    dict[function]['fCalled'].append(line)
+                if(line[0]!='.' and line[len(line)-1]==':'):
+                    bool=False
+                    break
     pprint.pprint(dict)   
 
 examine("marginPhase.c.s")
