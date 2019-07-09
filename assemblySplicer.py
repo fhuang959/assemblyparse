@@ -31,6 +31,22 @@ def examine(filename):
                 if(line[0] != '.' and line[len(line)-1] == ':'):
                     bool = False
                     break
+        if(len(dict[function]['code']>0):
+            bool=False
+            for method in dict[function]['fCalled']:
+                jointMethod=method+':'
+                if(fNames.count(jointMethod)>0):
+                    dict[function][method]=[]
+                    for line in code:
+                        if(line[5:]==method):
+                            bool=True
+                            continue
+                        if(bool):
+                            dict[function]['code'].append(line)
+                        if(line[0] != '.' and line[len(line)-1] == ':'):
+                            bool = False
+                            break                
+         
     #pprint.pprint(dict)
     pprint.pprint(dict['getExpectedIdentity:'])  
 
