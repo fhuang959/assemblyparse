@@ -32,6 +32,6 @@ def examine(filename):
                     bool = False
                     break
     #pprint.pprint(dict)
-    print(dict['getExpectedIdentity:'])  
+    pprint.pprint(dict['getExpectedIdentity:'])  
 
 examine('marginPhase.c.s') 
