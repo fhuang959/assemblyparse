@@ -42,7 +42,7 @@ def examine(filename):
                             bool=True
                             continue
                         if(bool):
-                            dict[function]['code'].append(line)
+                            dict[function][method].append(line)
                         if(line[0] != '.' and line[len(line)-1] == ':'):
                             bool = False
                             break                
