@@ -13,7 +13,7 @@ def examine(filename):
     for line in code:
         if(line[0] != '.' and line[len(line)-1] == ':'):
             fNames.append(line)
-    # print(fNames)
+    print(fNames)
     dict = {}
     for function in fNames:
         dict[function] = {'code':[],'fCalled':[]}
@@ -27,7 +27,7 @@ def examine(filename):
             if(bool):
                 dict[function]['code'].append(line)
                 if(line[0:4] == 'call'):
-                    dict[function]['fCalled'].append(line)
+                    dict[function]['fCalled'].append(line[5:])
                 if(line[0] != '.' and line[len(line)-1] == ':'):
                     bool = False
                     break
