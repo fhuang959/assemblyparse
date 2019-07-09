@@ -38,7 +38,7 @@ def examine(filename):
                 if(fNames.count(jointMethod)>0):
                     dict[function][method]=[]
                     for line in code:
-                        if(line[5:]==method):
+                        if(line[0:4]!='call' and line[5:]==method):
                             bool=True
                             continue
                         if(bool):
