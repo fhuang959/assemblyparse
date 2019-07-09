@@ -1,0 +1,15 @@
+vamos a ver....
+
+Replicate opening statements till fNames (open, read files, put into code, populate fNames)
+
+
+*@perhaps*
+replicate full Parser program.
+Create new keys in value dict of similar purpose to existing 'code' key
+    Run check to see if calls in fCalled are in fNames
+    if(in fNames) then create new 'code_fxnName' key and have list of code as value
+
+things to figure out:
+
+-how to have assembly file as output
+-how to format assembly?
