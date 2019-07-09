@@ -31,5 +31,7 @@ def examine(filename):
                 if(line[0] != '.' and line[len(line)-1] == ':'):
                     bool = False
                     break
-    pprint.pprint(dict)
-    #print(dict[getExpectedIdentity])   
+    #pprint.pprint(dict)
+    print(dict['getExpectedIdentity:'])  
+
+examine('marginPhase.c.s') 
