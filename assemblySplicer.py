@@ -43,9 +43,9 @@ def examine(filename):
                             continue
                         if(bool):
                             dict[function][method].append(line)
-                        if(line[0] != '.' and line[len(line)-1] == ':'):
-                            bool = False
-                            break                
+                            if(line[0] != '.' and line[len(line)-1] == ':'):
+                                bool = False
+                                break                
          
     #pprint.pprint(dict)
     pprint.pprint(dict['getExpectedIdentity:'])  
