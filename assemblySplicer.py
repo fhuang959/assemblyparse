@@ -31,7 +31,7 @@ def examine(filename):
                 if(line[0] != '.' and line[len(line)-1] == ':'):
                     bool = False
                     break
-        if(len(dict[function]['fCalled']>0):
+        if(len(dict[function]['fCalled'])>0):
             bool=False
             for method in dict[function]['fCalled']:
                 jointMethod=method+':'
