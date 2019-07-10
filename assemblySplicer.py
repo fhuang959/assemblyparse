@@ -53,6 +53,7 @@ def examine(filename):
     #for key,value in dictCode.items():
     #    output.write('%s:%n\n' % (key,value))
     for key in dictCode:
+        print(key)
         output.write(str(dictCode[key]))
         output.write('\n')
     #s=input('Name function to display')
