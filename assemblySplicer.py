@@ -25,12 +25,12 @@ def examine(filename):
                 bool=True
                 continue
             if(bool):
-                dict[function]['code'].append(line)
-                if(line[0:4] == 'call'):
-                    dict[function]['fCalled'].append(line[5:])
                 if(line[0] != '.' and line[len(line)-1] == ':'):
                     bool = False
                     break
+                dict[function]['code'].append(line)
+                if(line[0:4] == 'call'):
+                    dict[function]['fCalled'].append(line[5:])               
         if(len(dict[function]['fCalled'])>0):
             bool=False
             for method in dict[function]['fCalled']:
@@ -42,11 +42,11 @@ def examine(filename):
                             bool=True
                             continue
                         if(bool):
-                            dict[function][method].append(line)
                             if(line[0] != '.' and line[len(line)-1] == ':'):
                                 bool = False
-                                break                
-         
+                                break
+                            dict[function][method].append(line)
+                            
     #pprint.pprint(dict)
     pprint.pprint(dict['getExpectedIdentity:'])  
 
