@@ -14,9 +14,9 @@ def examine(filename):
         if(line[0] != '.' and line[len(line)-1] == ':'):
             fNames.append(line)
     print(fNames)
-    dict = {}
+    dictCode = {}
     for function in fNames:
-        dict[function] = {'code':[],'fCalled':[]}
+        dictCode[function] = {'code':[],'fCalled':[]}
     #print(dict)
     bool = False
     for function in fNames:
@@ -28,15 +28,15 @@ def examine(filename):
                 if(line[0] != '.' and line[len(line)-1] == ':'):
                     bool = False
                     break
-                dict[function]['code'].append(line)
+                dictCode[function]['code'].append(line)
                 if(line[0:4] == 'call'):
-                    dict[function]['fCalled'].append(line[5:])               
+                    dictCode[function]['fCalled'].append(line[5:])               
         if(len(dict[function]['fCalled'])>0):
             bool=False
             for method in dict[function]['fCalled']:
                 jointMethod=method+':'
                 if(fNames.count(jointMethod)>0):
-                    dict[function][method]=[]
+                    dictCode[function][method]=[]
                     for line in code:
                         if(line==jointMethod):
                             bool=True
@@ -45,12 +45,12 @@ def examine(filename):
                             if(line[0] != '.' and line[len(line)-1] == ':'):
                                 bool = False
                                 break
-                            dict[function][method].append(line)
+                            dictCode[function][method].append(line)
                             
     #pprint.pprint(dict)
-    pprint.pprint(dict['getExpectedIdentity:'])  
+    pprint.pprint(dictCode['getExpectedIdentity:'])  
 
 examine('marginPhase.c.s') 
 output = open("output.txt","w+")
-for key,value in dict.items():
+for key,value in dictCode.items():
     output.write('%s:%n\n' % (key,value))
