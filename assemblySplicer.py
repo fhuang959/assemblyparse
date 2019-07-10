@@ -51,3 +51,4 @@ def examine(filename):
     pprint.pprint(dict['getExpectedIdentity:'])  
 
 examine('marginPhase.c.s') 
+output = open("output.txt","w+")
