@@ -49,8 +49,9 @@ def examine(filename):
                             
     #pprint.pprint(dict)
     pprint.pprint(dictCode['getExpectedIdentity:'])  
+    output = open("output.txt","w+")
+    for key,value in dictCode.items():
+        output.write('%s:%n\n' % (key,value))
+
 
 examine('marginPhase.c.s') 
-output = open("output.txt","w+")
-for key,value in dictCode.items():
-    output.write('%s:%n\n' % (key,value))
