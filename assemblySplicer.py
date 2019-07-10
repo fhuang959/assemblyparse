@@ -13,7 +13,7 @@ def examine(filename):
     for line in code:
         if(line[0] != '.' and line[len(line)-1] == ':'):
             fNames.append(line)
-    print(fNames)
+    #print(fNames)
     dictCode = {}
     for function in fNames:
         dictCode[function] = {'code':[],'fCalled':[]}
@@ -48,10 +48,13 @@ def examine(filename):
                             dictCode[function][method].append(line)
                             
     #pprint.pprint(dict)
-    pprint.pprint(dictCode['getExpectedIdentity:'])  
+    #pprint.pprint(dictCode['getExpectedIdentity:'])  
     output = open("output.txt","w+")
-    for key,value in dictCode.items():
-        output.write('%s:%n\n' % (key,value))
-
+    #for key,value in dictCode.items():
+    #    output.write('%s:%n\n' % (key,value))
+    for key in dictCode:
+        output.write(str(dictCode[key]))
+        output.write('\n')
+    #s=input('Name function to display')
 
 examine('marginPhase.c.s') 
