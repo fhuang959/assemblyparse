@@ -31,9 +31,9 @@ def examine(filename):
                 dictCode[function]['code'].append(line)
                 if(line[0:4] == 'call'):
                     dictCode[function]['fCalled'].append(line[5:])               
-        if(len(dict[function]['fCalled'])>0):
+        if(len(dictCode[function]['fCalled'])>0):
             bool=False
-            for method in dict[function]['fCalled']:
+            for method in dictCode[function]['fCalled']:
                 jointMethod=method+':'
                 if(fNames.count(jointMethod)>0):
                     dictCode[function][method]=[]
