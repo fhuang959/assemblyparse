@@ -52,3 +52,5 @@ def examine(filename):
 
 examine('marginPhase.c.s') 
 output = open("output.txt","w+")
+for key,value in dict.items(dict):
+    output.write('%s:%n\n' % (key,value))
