@@ -68,12 +68,16 @@ def examine(fileList):
 def main():
   f=[]
   #f.append('marginPhase.c.s')
-  f.append('tester1.c.s')
-  f.append('tester2.c.s')
-  f.append('tester3.c.s')
-  examine(f)
+  #f.append('tester1.c.s')
+  #f.append('tester2.c.s')
+  #f.append('tester3.c.s')
+  #examine(f)
   cwd = os.getcwd()
   print(cwd)
-  for files in os.listdir(cwd):
-      print(files)
+  files = os.listdir(cwd)
+  for file in files:
+    if(file.endswith('.c.s') and not file.startswith('m')):
+      f.append(file)
+  examine(f)
+
 main()
