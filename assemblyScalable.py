@@ -52,10 +52,6 @@ def fDiscern(code,fNames,codeDict,key):
             break
           codeDict[key][function].append(line)
 
-
-
-
-
 def examine(fileList):
   code=getCode(fileList)
   fNames=getFNames(code)
@@ -65,13 +61,11 @@ def examine(fileList):
     fDiscern(code,fNames,codeDict,function)
   #pprint.pprint(codeDict['getExpectedIdentity:'])
   pprint.pprint(codeDict)
+
+
+  
 def main():
   f=[]
-  #f.append('marginPhase.c.s')
-  #f.append('tester1.c.s')
-  #f.append('tester2.c.s')
-  #f.append('tester3.c.s')
-  #examine(f)
   cwd = os.getcwd()
   print(cwd)
   files = os.listdir(cwd)
