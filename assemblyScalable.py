@@ -14,7 +14,7 @@ def getCode(fileList):
 def getFNames(code):
   fNames=[]
   for line in code:
-    if(line[0]!='.' and line[len(line)-1]==':'):
+    if((not line.startswith('.'))  and line.endswith(':')):
       fNames.append(line)
   return fNames
 
@@ -66,7 +66,10 @@ def examine(fileList):
   pprint.pprint(codeDict)
 def main():
   f=[]
-  f.append('marginPhase.c.s')
+  #f.append('marginPhase.c.s')
+  f.append('tester1.c.s')
+  f.append('tester2.c.s')
+  f.append('tester3.c.s')
   examine(f)
 main()  
 
