@@ -65,8 +65,7 @@ def examine(fileList):
 
 def codeWrite(codeDict):
     output=open("output.txt","w+")
-    for key in codeDict:
-        output.write(str(key))
+    output.write(str(codeDict))
 
 
 
