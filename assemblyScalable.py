@@ -75,5 +75,5 @@ def main():
   cwd = os.getcwd()
   print(cwd)
   for files in cwd:
-      print files
+      print(files)
 main()
