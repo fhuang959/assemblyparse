@@ -1,4 +1,5 @@
 import pprint
+import os
 
 def getCode(fileList):
   code=[]
@@ -71,4 +72,6 @@ def main():
   f.append('tester2.c.s')
   f.append('tester3.c.s')
   examine(f)
+  cwd = os.getcwd()
+  print(cwd)
 main()
