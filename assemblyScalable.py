@@ -52,6 +52,11 @@ def fDiscern(code,fNames,codeDict,key):
             break
           codeDict[key][function].append(line)
 
+
+def codeWrite(codeDict):
+    output=open("output.txt","w+")
+    pprint.pprint(codeDict, stream=output)
+
 def examine(fileList):
   code=getCode(fileList)
   fNames=getFNames(code)
@@ -62,10 +67,6 @@ def examine(fileList):
   #pprint.pprint(codeDict['getExpectedIdentity:'])
   #pprint.pprint(codeDict)
   codeWrite(codeDict)
-
-def codeWrite(codeDict):
-    output=open("output.txt","w+")
-    output.write((str(codeDict)))
 
 
 
