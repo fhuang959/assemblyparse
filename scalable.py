@@ -64,9 +64,9 @@ def examine(fileList):
     fDiscern(code,fNames,codeDict,function)
   #pprint.pprint(codeDict['getExpectedIdentity:'])
   pprint.pprint(codeDict)
-"""def main():
+def main():
   f=[]
   f.append('marginPhase.c.s')
   examine(f)
-main()  """
+main()  
 
