@@ -31,7 +31,7 @@ def fPopulate(code,fNames, codeDict, key):
       bool=True
       continue
     if(bool):
-      if((not line.startswith('.'))  and line.endswith(':')):
+      if(((not line.startswith('.'))  and line.endswith(':')) or line=='\n'):
         break
       codeDict[key]['code'].append(line)
       if(line[0:4] == 'call'):
@@ -47,7 +47,7 @@ def fDiscern(code,fNames,codeDict,key):
           bool=True
           continue
         if(bool):
-          if((not line.startswith('.'))  and line.endswith(':')):
+          if(((not line.startswith('.'))  and line.endswith(':')) or line=='\n'):
             break
           codeDict[key][function].append(line)
 
