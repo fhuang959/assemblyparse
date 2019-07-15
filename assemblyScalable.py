@@ -74,4 +74,6 @@ def main():
   examine(f)
   cwd = os.getcwd()
   print(cwd)
+  for files in cwd:
+      print files
 main()
