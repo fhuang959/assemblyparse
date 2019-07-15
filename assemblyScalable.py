@@ -54,7 +54,7 @@ def fDiscern(code,fNames,codeDict,key):
 
 
 def codeWrite(codeDict):
-    output=open("output.txt","w+")
+    output=open("output.txt","w")
     pprint.pprint(codeDict, stream=output)
 
 def examine(fileList):
