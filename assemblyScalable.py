@@ -43,7 +43,7 @@ def fDiscern(code,fNames,codeDict,key):
     if(fNames.count(function)>0):
       codeDict[key][function]=[]
       for line in code:
-        if("""(line[5:]+":"""line==function):
+        if(line==function):
           bool=True
           continue
         if(bool):
