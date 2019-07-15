@@ -60,10 +60,16 @@ def examine(fileList):
     fPopulate(code,fNames,codeDict,function)
     fDiscern(code,fNames,codeDict,function)
   #pprint.pprint(codeDict['getExpectedIdentity:'])
-  pprint.pprint(codeDict)
+  #pprint.pprint(codeDict)
+  codeWrite(codeDict)
+
+def codeWrite(codeDict):
+    output=open("output.txt","w+")
+    for key in codeDict:
+        output.write(str(key))
 
 
-  
+
 def main():
   f=[]
   cwd = os.getcwd()
