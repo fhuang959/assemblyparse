@@ -9,7 +9,7 @@ def getCode(fileList):
       for line in lines:
         line=line.strip()
         code.append(line)
-    code.append('\n')
+    code.append('\n') # make eof more specific name
   return code
 
 def getFNames(code):
