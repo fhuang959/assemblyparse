@@ -13,3 +13,14 @@ things to figure out:
 
 -how to have assembly file as output
 -how to format assembly?
+
+***Recursive Search***
+
+Some sort of recursion
+
+Create a list [] of assmiliated methods
+
+Get a method from user
+Append all 'methods* from fCalled[] to assimilated list
+Get code for all methods 
+Rinse and repeat
