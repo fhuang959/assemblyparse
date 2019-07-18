@@ -20,7 +20,7 @@ def dictInit():
   codeDict = examine(f)
   return codeDict
 
-def dictInit(tDict,codeDict,s):
+def tDictInit(tDict,codeDict,s):
     tDict[s]=codeDict[s]
     return tDict
 
@@ -38,7 +38,7 @@ def main():
     fNames=codeDict.getFNames()
     s = getTargetMethod(fNames)
     tDict={}
-    tDict=dictInit(tDict,codeDict,s)
+    tDict=tDictInit(tDict,codeDict,s)
     recursivelyPrintToDict(codeDict,s,fNames,tDict)
     pprint.pprint(tDict)
 
