@@ -68,5 +68,5 @@ def examine(fileList):
     fDiscern(code,fNames,codeDict,function)
   #pprint.pprint(codeDict['getExpectedIdentity:'])
   #pprint.pprint(codeDict)
-  codeWrite(codeDict)
+  #codeWrite(codeDict)
   return codeDict
