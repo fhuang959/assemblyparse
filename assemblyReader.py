@@ -1,5 +1,6 @@
 import assemblyScalable
 import pprint
+import os
 
 def getTargetMethod(fNames):
     s = input("Print target method: "+"\n")
