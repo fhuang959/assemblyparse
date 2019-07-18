@@ -6,7 +6,7 @@ def getTargetMethod(fNames):
     if(fNames.count(s)>0):
         return s
     else:
-        getTargetMethod(fNames)
+        return getTargetMethod(fNames)
 
 
 def dictInit():
