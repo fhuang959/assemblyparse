@@ -36,7 +36,7 @@ def recursivelyPrintToDict(codeDict,tFxn,fNames,tDict):
 
 def main():
     codeDict=dictInit()
-    fNames=codeDict.assemblyScalable.getFNames()
+    fNames=assemblyScalable.getFNames(codeDict)
     s = getTargetMethod(fNames)
     tDict={}
     tDict=tDictInit(tDict,codeDict,s)
