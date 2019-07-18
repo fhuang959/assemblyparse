@@ -41,6 +41,7 @@ def main():
     tDict={}
     tDict=tDictInit(tDict,codeDict,s)
     recursivelyPrintToDict(codeDict,s,fNames,tDict)
-    pprint.pprint(tDict)
+    #pprint.pprint(tDict)
+    assemblyScalable.codeWrite(tDict)
 
 main()
