@@ -18,7 +18,7 @@ def dictInit():
   for file in files:
     if(file.endswith('.c.s') and not file.startswith('m')):
       f.append(file)
-  codeDict = examine(f)
+  codeDict = assemblyScalable.examine(f)
   return codeDict
 
 def tDictInit(tDict,codeDict,s):
