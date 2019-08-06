@@ -16,7 +16,7 @@ def dictInit():
   print(cwd)
   files = os.listdir(cwd)
   for file in files:
-    if(file.endswith('.s') and not file.startswith('m')):
+    if(file.endswith('.s') ):#and not file.startswith('m')):
       f.append(file)
   codeDict = assemblyScalable.examine(f)
   return codeDict
