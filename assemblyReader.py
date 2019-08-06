@@ -45,4 +45,4 @@ def run():
     #pprint.pprint(tDict)
     assemblyScalable.codeWrite(tDict)
 
-run()
+#run()

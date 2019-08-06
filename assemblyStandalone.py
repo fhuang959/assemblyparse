@@ -10,7 +10,9 @@ def getFiles(fileList):
 
 
 def main():
-    fileList=[]
+    codeDict=assemblyReader.dictInit()
+    assemblyScalable.codeWrite(codeDict)
+    """fileList=[]
     codeDict={}
 
     s=input("auto/manual?")
@@ -21,6 +23,6 @@ def main():
     elif(s=='m' or s=='manual'):
         fileList=getFiles(fileList)
         codeDict=assemblyScalable.examine(fileList)
-        assemblyScalable.codeWrite(codeDict)
+        assemblyScalable.codeWrite(codeDict)"""
 
 main()
