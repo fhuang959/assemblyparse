@@ -34,7 +34,7 @@ def recursivelyPrintToDict(codeDict,tFxn,fNames,tDict):
 
 
 
-def main():
+def run():
     codeDict=dictInit()
     fNames=assemblyScalable.getFNames(codeDict)
     print(fNames)
@@ -45,4 +45,4 @@ def main():
     #pprint.pprint(tDict)
     assemblyScalable.codeWrite(tDict)
 
-main()
+run()
