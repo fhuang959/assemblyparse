@@ -17,10 +17,10 @@ def main():
 
     if(s=="a" or s=='auto'):
         codeDict=assemblyReader.dictInit()
-        assemblyScalable.codeWrite(tDict)
+        assemblyScalable.codeWrite(codeDict)
     elif(s=='m' or s=='manual'):
         fileList=getFiles()
         codeDict=assemblyScalable.examine(fileList)
-        assemblyScalable.codeWrite(tDict)
+        assemblyScalable.codeWrite(codeDict)
 
 main()
