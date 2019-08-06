@@ -9,7 +9,7 @@ def getFiles(fileList):
     getFiles(fileList)
 
 
-def run():
+def main():
     fileList=[]
     codeDict={}
 
@@ -19,8 +19,8 @@ def run():
         codeDict=assemblyReader.dictInit()
         assemblyScalable.codeWrite(codeDict)
     elif(s=='m' or s=='manual'):
-        fileList=getFiles()
+        fileList=getFiles(fileList)
         codeDict=assemblyScalable.examine(fileList)
         assemblyScalable.codeWrite(codeDict)
 
-run()
+main()
