@@ -9,7 +9,7 @@ def getFiles(fileList):
     getFiles(fileList)
 
 
-def main():
+def run():
     fileList=[]
     codeDict={}
 
@@ -23,4 +23,4 @@ def main():
         codeDict=assemblyScalable.examine(fileList)
         assemblyScalable.codeWrite(codeDict)
 
-main()
+run()
