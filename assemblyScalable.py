@@ -38,6 +38,13 @@ def fPopulate(code,fNames, codeDict, key):
       if(line[0:4] == 'call'):
         codeDict[key]['fCalled'].append(line[5:]+':')
 
+def fList(fNames,codeDict,key):
+    codeDict[key]['fNames']=[]
+    for function in codeDict[key]['fCalled']:
+        if(fNames.count(function)>0):
+            codeDict[key]['fNames'].append(function)
+
+
 def fDiscern(code,fNames,codeDict,key):
   bool=False
   for function in codeDict[key]['fCalled']:
@@ -65,6 +72,7 @@ def examine(fileList):
   codeDict=dInit(fNames)
   for function in fNames:
     fPopulate(code,fNames,codeDict,function)
+    fList(fNames,codeDict,function)
     fDiscern(code,fNames,codeDict,function)
   #pprint.pprint(codeDict['getExpectedIdentity:'])
   #pprint.pprint(codeDict)
