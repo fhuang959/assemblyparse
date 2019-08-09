@@ -7,4 +7,4 @@ Created by and Property of Saumil Thakore
 https://github.com/saumilkt
 
 
-Don't believe me? Check the commit logs ¯\_(ツ)_/¯
+Don't believe me? Check the commit logs ¯\\_(ツ)_/¯
